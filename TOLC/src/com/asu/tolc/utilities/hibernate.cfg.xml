@@ -5,13 +5,20 @@
 <hibernate-configuration>
     <session-factory>
 
-        <!-- hibernate dialect -->
+        <!--  
         <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
 
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/test</property>
         <property name="hibernate.connection.username">root</property>
         <property name="hibernate.connection.password">admin</property>
+        -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://sql2.freemysqlhosting.net:3306/sql259941</property>
+        <property name="hibernate.connection.username">sql259941</property>
+        <property name="hibernate.connection.password">zZ4%wF5*</property>
         <property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
 
         <!-- Automatic schema creation (begin) === -->
