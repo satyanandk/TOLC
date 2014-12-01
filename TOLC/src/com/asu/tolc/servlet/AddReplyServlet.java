@@ -44,6 +44,7 @@ public class AddReplyServlet extends HttpServlet {
 		HttpSession session = request.getSession(true);
 		String userName = (String)session.getAttribute("UserName");
 		String reply = (String)request.getParameter("reply");
+		String category = (String)request.getParameter("category");
 		String button = request.getParameter("action").toString();
 		QuestionEntity qEntity = (QuestionEntity)session.getAttribute("QuestionEntity");
 		if(button.equals("Subscribe"))
@@ -57,7 +58,7 @@ public class AddReplyServlet extends HttpServlet {
 			
 			ReplyService rService = new ReplyService();
 			try {
-				rService.postReply(userName, qEntity.getQuestionNo(),reply );
+				rService.postReply(userName, qEntity.getQuestionNo(),reply,category );
 				System.out.println("in controller");
 				RequestDispatcher rd =
 					    this.getServletConfig()
