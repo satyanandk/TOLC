@@ -43,10 +43,9 @@ public class LoginServlet extends HttpServlet {
 		request.removeAttribute("exception");
 		HttpSession session = request.getSession(true);
 		String userName = (String)request.getParameter("userName");
-		System.out.println("User Name="+userName);
 		
 		String password = (String)request.getParameter("password");
-		System.out.println("Passowrd = "+password);
+		
 		
 		UserService userService = new UserService(userName,password);
 		try

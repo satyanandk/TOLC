@@ -30,8 +30,6 @@
 					<div class="hero-unit">
   		<div class="container">
     		<h1>Welcome <%=(String)session.getAttribute("UserName")%></h1>
-    		
-    		
   		</div>
   		
 </div>

@@ -7,46 +7,51 @@
 <title>Welcome</title>
 <!-- Bootstrap core CSS -->
 <!--Online link to include bootstrap need not include any libraries in eclipse -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link href="assets/login.css" type="text/css" rel="stylesheet"> 
 
 </head>
-<body>
+<body class="login" >
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class=""><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <div class="container">
 
-		<h1>
-			<a href="#">Welcome</a>
-		</h1>
+		<div>
+			<p>Hello</p>
+			<p>Please Login</p>
+		</div>
 		<div id="mainFrame">
 			<div id="content">
 				<div class="row">
-					<div class="span3">
-						<ul class="nav nav-list">
-							<li class="nav-header">Links</li>
-							<li><a href="Register.jsp">Register</a></li>
-						</ul>
-					</div>
-  		<div class="span9">
-					<div class="hero-unit">
+  		<div class="span12" style="text-align:center;">
   		<div class="container">
-    		<h1>Welcome</h1>
-    		<p>Please Login</p>
-    		
+    		<h2>Welcome To TravelAdvisor</h2>
   		</div>
-  		
-</div>
 
-<div class="span8">
+<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:35%;">
           <div class="container">
-          <div style="color:red">${exception}</div>
+          <div style="color:red;margin-left:4%;margin-top:1%">${exception}</div>
           
           <form action="Login" method="POST">
     	 
-	<table>
+	<table style="margin-left:2.5%;margin-top:2%">
 		
 		<tr>
 			<td>User Name</td>
-			<td><input type = "text" name = "userName" ></td>
+			<td><input type = "text" name = "userName" style="width:" ></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -56,7 +61,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><button class="btn btn-success" type="submit" name="login">Go</button></td>
+			<td><button class="btn btn-success" type="submit" name="login" style="margin-left:30%">Login</button></td>
 			<td></td>
 		</tr>
 	</table>
