@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Welcome</title>
+<title>Login</title>
 <!-- Bootstrap core CSS -->
 <!--Online link to include bootstrap need not include any libraries in eclipse -->
 <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -19,8 +19,8 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class=""><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li class=""><a href="Register.jsp">Register</a></li>
+
         
       </ul>
       
@@ -28,17 +28,12 @@
   </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-
-		<div>
-			<p>Hello</p>
-			<p>Please Login</p>
-		</div>
 		<div id="mainFrame">
 			<div id="content">
 				<div class="row">
   		<div class="span12" style="text-align:center;">
   		<div class="container">
-    		<h2>Welcome To TravelAdvisor</h2>
+    		<h2>Welcome To Voyage</h2>
   		</div>
 
 <div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:35%;">
@@ -47,11 +42,11 @@
           
           <form action="Login" method="POST">
     	 
-	<table style="margin-left:2.5%;margin-top:2%">
+	<table style="margin-left:2.5%;margin-top:3%">
 		
 		<tr>
 			<td>User Name</td>
-			<td><input type = "text" name = "userName" style="width:" ></td>
+			<td><input type = "text" name = "userName" ></td>
 			<td></td>
 		</tr>
 		<tr>
@@ -61,7 +56,7 @@
 		</tr>
 		<tr>
 			<td></td>
-			<td><button class="btn btn-success" type="submit" name="login" style="margin-left:30%">Login</button></td>
+			<td><button class="btn btn-success" type="submit" name="login">Login</button></td>
 			<td></td>
 		</tr>
 	</table>

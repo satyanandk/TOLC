@@ -4,59 +4,57 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Welcome</title>
+<title>Register</title>
 <!-- Bootstrap core CSS -->
 <!--Online link to include bootstrap need not include any libraries in eclipse -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<link href="assets/login.css" type="text/css" rel="stylesheet"> 
 
 </head>
-<body>
-<div class="container">
+<body class="login" >
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="Login.jsp">Login</a></li>
 
-		<h1>
-			<a href="#">Welcome</a>
-		</h1>
+        
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
 		<div id="mainFrame">
 			<div id="content">
 				<div class="row">
-					<div class="span3">
-						<ul class="nav nav-list">
-							<li class="nav-header">Links</li>
-							<li><a href="Login.jsp">Login</a></li>
-						</ul>
-					</div>
-  		<div class="span9">
-					<div class="hero-unit">
+  		<div class="span12" style="text-align:center;">
   		<div class="container">
-    		<h1>Registration</h1>
-    		
+    		<h2>Registration</h2>
   		</div>
-  		
-</div>
 
-<div class="span8">
+<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:35%;">
           <div class="container">
-          <div style="color:red">${exception}</div>
+          <div style="color:red;margin-left:4%;margin-top:1%">${exception}</div>
           
           <form action="Register" method="POST">
     	 
-	<table>
+	<table style="margin-left:2.5%;margin-top:3%">
 		
 		<tr>
 			<td>User Name</td>
 			<td><input type = "text" name = "userName" ></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>Password</td>
 			<td><input type="password" name = "password"></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>Email</td>
 			<td><input type = "text" name = "email" ></td>
-			<td></td>
 		</tr>
 		<tr>
 			<td>State</td>
@@ -66,17 +64,14 @@
 <option value="Utah">Utah</option>
 <option value="Nevada">Nevada</option>
 </select></td>
-			<td></td>
 		</tr>
 		<tr>
-		<td><input type="checkbox" name="notifications" value="Y">Receive E-Mail Notifications</td>
 		<td></td>
-		<td></td>
+		<td><input type="checkbox" name="notifications" value="Y">&nbsp;Receive E-Mail Notifications</td>
 		</tr>
 		<tr>
 			<td></td>
 			<td><button class="btn btn-success" type="submit" name="Register">Register</button></td>
-			<td></td>
 		</tr>
 	</table>
 	</form>

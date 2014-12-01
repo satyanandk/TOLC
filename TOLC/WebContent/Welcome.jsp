@@ -4,36 +4,40 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=US-ASCII">
-<title>Welcome</title>
+<title>Home</title>
 <!-- Bootstrap core CSS -->
 <!--Online link to include bootstrap need not include any libraries in eclipse -->
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <link href="//netdna.bootstrapcdn.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
+<link href="assets/login.css" type="text/css" rel="stylesheet">
 </head>
-<body>
+<body class="login" >
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="PostQuestion.jsp">Post Question</a></li>
+							<li><a href="PostReplyServlet1">Post Reply</a></li>
+							<li><a href="Logout.jsp">Logout</a></li>
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <div class="container">
-
-		<jsp:include page="Banner.jsp"/> 
 		<div id="mainFrame">
 			<div id="content">
 				<div class="row">
-					<div class="span3">
-						<ul class="nav nav-list">
-							<li class="nav-header">Links</li>
-							<li><a href="PostQuestion.jsp">Post Question</a></li>
-							<li><a href="PostReplyServlet1">Post Reply</a></li>
-							<li><a href="Logout.jsp">Logout</a></li>
-						</ul>
-					</div>
-  		<div class="span9">
-					<div class="hero-unit">
+				<div class="span12" style="text-align:center;">
   		<div class="container">
-    		<h1>Welcome <%=(String)session.getAttribute("UserName")%></h1>
+    		<h2>Welcome <%=(String)session.getAttribute("UserName")%></h2>
   		</div>
-  		
-</div>
-</div>
+  		<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:15%;text-align:center;">
+  		<jsp:include page="Banner.jsp"/> 
+	</div>
+					</div>
 					</div>
 					</div>
 					</div>
