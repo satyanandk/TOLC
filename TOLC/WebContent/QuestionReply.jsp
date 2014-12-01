@@ -97,10 +97,10 @@
 		<tr>
 			<td>Category</td>
 			<td><select name="category">
-<option value="General">General</option>
-<option value="Food">Food</option>
 <option value="Event">Event</option>
-<option value="Place">Place</option>
+<option value="Food">Food</option>
+<option value="Landmark">Landmark</option>
+<option value="Travel">Travel</option>
 </select></td>
 			<td></td>
 		</tr>

@@ -1,6 +1,7 @@
 package com.asu.tolc.servlet;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -11,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import com.asu.tolc.entity.UserEntity;
+import com.asu.tolc.model.ReplyService;
 import com.asu.tolc.model.UserService;
 
 /**
@@ -54,6 +56,9 @@ public class LoginServlet extends HttpServlet {
 			UserEntity userEntity = userService.login();
 			session.setAttribute("UserName", userName);
 			session.setAttribute("UserEntity", userEntity);
+			ReplyService rService = new ReplyService();
+			HashMap<String,Integer> hMap = rService.createBadge(userName);
+			session.setAttribute("Hmap", hMap);
 			request.getRequestDispatcher("Welcome.jsp").forward(request, response);
 		}
 		catch(Exception e)

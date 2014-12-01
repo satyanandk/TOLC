@@ -1,6 +1,7 @@
 package com.asu.tolc.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -157,6 +158,59 @@ public class ReplyService {
 		{
 			hibSession.close();
 		}
+	}
+	
+	public HashMap<String,Integer> createBadge(String userName)
+	{
+		HashMap<String,Integer> bMap = new HashMap<String,Integer>();
+		
+		Transaction tx=null;
+		Integer eventCount=0;
+		Integer foodCount=0;
+		Integer landmarkCount=0;
+		Integer travelCount=0;
+		org.hibernate.Session hibSession = SessionFactoryUtil.getSessionFactory().openSession();
+		
+		try
+		{
+			//tx=hibSession.beginTransaction();
+			String hql="FROM ReplyEntity R WHERE R.repliedBy = '"+userName+"' order by category";
+			Query query = hibSession.createQuery(hql);
+			List results = query.list();
+			
+			for (Iterator iterator = 
+					results.iterator(); iterator.hasNext();){
+				ReplyEntity replyEntity = (ReplyEntity) iterator.next();
+				
+				if(replyEntity.getCategory().equals("Event"))
+				{
+					eventCount++;
+				}
+				else if(replyEntity.getCategory().equals("Food"))
+				{
+					foodCount++;
+				}
+				else if(replyEntity.getCategory().equals("Landmark"))
+				{
+					landmarkCount++;
+				}
+				else if(replyEntity.getCategory().equals("Travel"))
+				{
+					travelCount++;
+				}
+			}			
+			bMap.put("Event", eventCount);
+			bMap.put("Food", foodCount);
+			bMap.put("Landmark", landmarkCount);
+			bMap.put("Travel", travelCount);
+		}
+		finally
+		{
+			hibSession.close();
+		}
+		
+		return bMap;
+		
 	}
 
 }
