@@ -76,7 +76,7 @@ public class ReplyService {
 		
 	}
 	
-	public void postReply(String userName, int questionNum, String reply) throws Exception
+	public void postReply(String userName, int questionNum, String reply, String category) throws Exception
 	{
 		Transaction tx=null;
 		ReplyEntity replyEntity = new ReplyEntity();
@@ -89,6 +89,7 @@ public class ReplyService {
 			replyEntity.setQuestionNo(questionNum);
 			replyEntity.setRepliedBy(userName);
 			replyEntity.setReply(reply);
+			replyEntity.setCategory(category);
 			
 			hibSession.save(replyEntity);
 			System.out.println("Entered Here1");

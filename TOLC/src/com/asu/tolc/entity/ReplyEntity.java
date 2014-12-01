@@ -20,6 +20,9 @@ public class ReplyEntity {
 	private String reply;
 	@Column(name="replied_by", length=10)
 	private String repliedBy;
+	@Column(name="category", length=20)
+	private String category;
+	
 	public int getReplyNo() {
 		return replyNo;
 	}
@@ -43,6 +46,12 @@ public class ReplyEntity {
 	}
 	public void setRepliedBy(String repliedBy) {
 		this.repliedBy = repliedBy;
+	}
+	public String getCategory() {
+		return category;
+	}
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	
 	

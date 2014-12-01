@@ -95,6 +95,16 @@
 			<td></td>
 		</tr>
 		<tr>
+			<td>Category</td>
+			<td><select name="category">
+<option value="General">General</option>
+<option value="Food">Food</option>
+<option value="Event">Event</option>
+<option value="Place">Place</option>
+</select></td>
+			<td></td>
+		</tr>
+		<tr>
 			<td>Response</td>
 			<td><textarea name="reply" rows="10" cols="150"></textarea></td>
 			<td></td>
