@@ -34,7 +34,7 @@
   		<div class="container">
     		<h2>Welcome <%=(String)session.getAttribute("UserName")%></h2>
   		</div>
-  		<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:15%;text-align:center;">
+  		<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:35%;text-align:center;;opacity:0.75">
   		<jsp:include page="Banner.jsp"/> 
 	</div>
 					</div>

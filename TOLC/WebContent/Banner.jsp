@@ -22,5 +22,8 @@ if(userEntity != null)
 				else if((noOfposts+noOfReplies)<3 && (noOfposts+noOfReplies)>0)
 				{%>
 				<image class="icon-star"></image>
+				<%}
+				else if((noOfposts+noOfReplies)==0){%>
+				<image src="assets/Favourite-icon.png"></image>
 				<%}%>
-</h2>
+</h1>

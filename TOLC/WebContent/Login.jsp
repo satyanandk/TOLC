@@ -36,7 +36,7 @@
     		<h2>Welcome To Voyage</h2>
   		</div>
 
-<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:35%;">
+<div class="span4" style="background-color:#ffffff;margin-top:10%;border:2px solid;border-radius:25px;margin-left:35%;opacity:0.75">
           <div class="container">
           <div style="color:red;margin-left:4%;margin-top:1%">${exception}</div>
           
